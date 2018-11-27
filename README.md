@@ -13,6 +13,7 @@ gcloud beta firestore import gs://terraform-is-con-2018/2018-11-27T02:18:39_8740
 
 
 #Deploy Website - Manually 
+
 gcloud functions deploy getRandomQuestion --source=https://source.developers.google.com/projects/is-con-quiz-project-5/repos/is-con-2018 --trigger-http
 gcloud functions deploy checkanswer --source=https://source.developers.google.com/projects/is-con-quiz-project-5/repos/is-con-2018 --trigger-http
 
