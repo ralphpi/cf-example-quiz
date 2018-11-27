@@ -1,14 +1,16 @@
 cf-example-quiz
 
-#Run Terraform -Create Project, link billing, enable apis, and create Repo for Website
+#Run Terraform: Create Project, link billing, enable apis, and create Repo for Website
 
 #Initialize Firebase
 
+	#Login to Firebase console, initialize gcp project & database.
 	gcloud init
 	gcloud beta firestore import gs://terraform-is-con-2018/2018-11-27T02:18:39_87408
 
-#Deploy Website - Manually & Clone GitHub Repo to GCP Repo
-
+#Deploy Website - Manually
+	
+	#Initialize local repo and push to GCP repo
 	gcloud functions deploy getRandomQuestion --source=https://source.developers.google.com/projects/is-con-quiz-project-7/repos/is-con-2018 --trigger-http
 	gcloud functions deploy checkanswer --source=https://source.developers.google.com/projects/is-con-quiz-project-7/repos/is-con-2018 --trigger-http
 
