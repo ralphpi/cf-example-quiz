@@ -7,6 +7,7 @@ admin.initializeApp(functions.config().firebase);
 
 const db = admin.firestore();
 
+
 //Number of Questions. We could have evaluated the count of questions, but thats for a future
 //enhancement
 const countQuestions = 2
@@ -23,9 +24,13 @@ let question_template = ({
     return `
       <!DOCTYPE html>
       <html>
-        <head>
+      <head>
         </head>
         <body>
+        <img src="https://disrupthr.co/wp-content/uploads/2016/03/Ultimate-Software-Logo.png" alt="HTML5 Icon" align="middle">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <center>  
           <h2>Welcome to IS-CON-2018!</h2>
           <form name="quizform" action="/checkanswer" method="POST">
             <input type="hidden" name="id" value="${id}">
@@ -38,6 +43,7 @@ let question_template = ({
             </select>
             <input name="submit" type="submit"/>
           </form>
+          <center/>
         </body>
       </html>`;
 }
@@ -50,8 +56,13 @@ let correct_answer_template = () => {
         <head>
         </head>
         <body>
+          <img src="https://disrupthr.co/wp-content/uploads/2016/03/Ultimate-Software-Logo.png" alt="HTML5 Icon" align="middle">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <center>
           <h2>Welcome to IS-CON-2018!</h2>
           <p>Great. Your answer is correct. <a href="/getRandomQuestion">Answer another question</a></p>
+          <center/>
         </body>
       </html>`;
 }
@@ -61,15 +72,20 @@ let wrong_answer_template = ({
     correct_answer
 }) => {
     return `
-      <!DOCTYPE html>
-      <html>
-        <head>
-        </head>
-        <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+      </head>
+      <body>
+          <img src="https://disrupthr.co/wp-content/uploads/2016/03/Ultimate-Software-Logo.png" alt="HTML5 Icon" align="middle">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <center>
           <h2>Welcome IS-CON-2018!!!</h2>
-          <p>Sorry. The correct is ${correct_answer}. <a href="/getRandomQuestion">Answer another question</a></p>
-        </body>
-      </html>`;
+        <p>Sorry. The correct is ${correct_answer}. <a href="/getRandomQuestion">Answer another question</a></p>
+          <center/>
+      </body>
+    </html>`;
 }
 
 //Function to get a random question from the Firestore questions collection
