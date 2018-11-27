@@ -11,8 +11,8 @@ cf-example-quiz
 #Deploy Website - Manually
 	
 	#Initialize local repo and push to GCP repo
-	gcloud functions deploy getRandomQuestion --source=https://source.developers.google.com/projects/is-con-quiz-project-10/repos/is-con-2018 --trigger-http
-	gcloud functions deploy checkanswer --source=https://source.developers.google.com/projects/is-con-quiz-project-10/repos/is-con-2018 --trigger-http
+	gcloud functions deploy getRandomQuestion --source=https://source.developers.google.com/projects/is-con-quiz-project-11/repos/is-con-2018 --trigger-http
+	gcloud functions deploy checkanswer --source=https://source.developers.google.com/projects/is-con-quiz-project-11/repos/is-con-2018 --trigger-http
 
 
 #Configure Jeknins Job - Add Credential
@@ -20,6 +20,6 @@ cf-example-quiz
 	#!/bin/bash
 	gcloud auth activate-service-account --key-file=is-con-terraform-1806d84527d4.json
 	gcloud functions list
-	gcloud functions deploy getRandomQuestion --trigger-http --source=https://source.developers.google.com/projects/is-con-quiz-project-10/repos/is-con-2018
-	gcloud functions deploy checkanswer --trigger-http --source=https://source.developers.google.com/projects/is-con-quiz-project-10/repos/is-con-2018
+	gcloud functions deploy getRandomQuestion --trigger-http --source=https://source.developers.google.com/projects/is-con-quiz-project-11/repos/is-con-2018
+	gcloud functions deploy checkanswer --trigger-http --source=https://source.developers.google.com/projects/is-con-quiz-project-11/repos/is-con-2018
 

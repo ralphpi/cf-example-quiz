@@ -27,11 +27,12 @@ let question_template = ({
       <head>
         </head>
         <body>
+        <center> 
         <img src="https://disrupthr.co/wp-content/uploads/2016/03/Ultimate-Software-Logo.png" alt="HTML5 Icon" align="middle">
         <p>&nbsp;</p>
         <p>&nbsp;</p>
-        <center>  
-          <h2>Welcome to IS-CON-2018!</h2>
+         
+          <h2>Welcome to IS-CON-2018!!!!!!!!!!!</h2>
           <form name="quizform" action="/checkanswer" method="POST">
             <input type="hidden" name="id" value="${id}">
             <p>${title}</p>
@@ -56,11 +57,12 @@ let correct_answer_template = () => {
         <head>
         </head>
         <body>
+        <center>
           <img src="https://disrupthr.co/wp-content/uploads/2016/03/Ultimate-Software-Logo.png" alt="HTML5 Icon" align="middle">
           <p>&nbsp;</p>
           <p>&nbsp;</p>
-          <center>
-          <h2>Welcome to IS-CON-2018!</h2>
+          
+          <h2>Welcome to IS-CON-2018!!!!!!!!!!!!</h2>
           <p>Great. Your answer is correct. <a href="/getRandomQuestion">Answer another question</a></p>
           <center/>
         </body>
@@ -77,11 +79,12 @@ let wrong_answer_template = ({
       <head>
       </head>
       <body>
+      <center>
           <img src="https://disrupthr.co/wp-content/uploads/2016/03/Ultimate-Software-Logo.png" alt="HTML5 Icon" align="middle">
           <p>&nbsp;</p>
           <p>&nbsp;</p>
-          <center>
-          <h2>Welcome IS-CON-2018!!!</h2>
+          
+          <h2>Welcome IS-CON-2018!!!!!!!!!!!!!!!!!!</h2>
         <p>Sorry. The correct is ${correct_answer}. <a href="/getRandomQuestion">Answer another question</a></p>
           <center/>
       </body>
