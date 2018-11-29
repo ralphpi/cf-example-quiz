@@ -12,7 +12,7 @@ cf-example-quiz
 	
 	#Initialize local repo and push to GCP repo
 	gcloud functions deploy getRandomQuestion --source=https://source.developers.google.com/projects/${project}/repos/${repo} --trigger-http
-	gcloud functions deploy checkanswer --source=https://gcprepo --trigger-http
+	gcloud functions deploy checkanswer --source=https://source.developers.google.com/projects/${project}/repos/${repo} --trigger-http
 
 
 #Configure Jeknins Job - Add Credential
